@@ -58,3 +58,21 @@ If you want to learn more about building native executables, please consult http
 Easily start your Reactive RESTful Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+
+# Run MongoDB
+
+### Pull Docker Image
+
+```
+docker pull mongo
+```
+
+```agsl
+docker run
+-d
+--name YOUR_CONTAINER_NAME_HERE
+-p YOUR_LOCALHOST_PORT_HERE:27017
+-e MONGO_INITDB_ROOT_USERNAME=YOUR_USERNAME_HERE
+-e MONGO_INITDB_ROOT_PASSWORD=YOUR_PASSWORD_HERE
+mongo
+```
