@@ -68,11 +68,17 @@ docker pull mongo
 ```
 
 ```agsl
-docker run
--d
---name YOUR_CONTAINER_NAME_HERE
--p YOUR_LOCALHOST_PORT_HERE:27017
--e MONGO_INITDB_ROOT_USERNAME=YOUR_USERNAME_HERE
--e MONGO_INITDB_ROOT_PASSWORD=YOUR_PASSWORD_HERE
-mongo
+docker run -d --name mongo -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin123 mongo
+```
+
+### Connect with MongoSh
+
+```agsl
+mongosh mongodb://127.0.0.1:27017 -u admin -p
+```
+
+### Create Database
+
+```
+
 ```
